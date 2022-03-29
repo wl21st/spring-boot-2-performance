@@ -9,12 +9,11 @@ import reactor.core.publisher.Mono;
 @Component
 public class HelloController {
 
-    public Mono<ServerResponse> ping(ServerRequest serverRequest) {
-        return ServerResponse.ok()
-                .contentType(MediaType.APPLICATION_JSON)
-                .bodyValue("{\n" +
-                        "  \"status\": \"ok\"\n" +
-                        "}");
-    }
+  public Mono<ServerResponse> ping(ServerRequest serverRequest) {
+    return ServerResponse
+        .ok()
+        .contentType(MediaType.APPLICATION_JSON)
+        .bodyValue("{\"status\": \"ok\"}");
+  }
 
 }
